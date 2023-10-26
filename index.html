@@ -4,8 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Card Box Website</title>
+    <title>💓My Miracle Destiny</title>
+    
+    
     <style>
+
+#ikon-situs {
+  width: 50px; /* Lebar gambar */
+  height: 50px; /* Tinggi gambar */
+  margin: 10px; /* Ruang sekitar gambar */
+  filter: grayscale(50%); /* Misalnya, mengubah warna menjadi abu-abu */
+}
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -24,6 +34,8 @@
         }
 
         .card-box {
+            margin-left: 75px;
+            scale: 0.7;
             width: 500px;
             height: 750px;
             background-color: #ffffffbb;
@@ -101,12 +113,14 @@
         }
 
         #video1{
+           
             opacity: 1;
             position: fixed;
-            right: 0;
+            /* right: 0;
             bottom: 0;
             min-width: 100%;
-            min-height: 100%;
+            min-height: 100%; */
+            scale: 0.75;
 
 
         }
@@ -125,8 +139,13 @@
             margin-top: 140px;
         }
     </style>
+
+<link rel="icon" type="image/png" href="vm.jpg">
+
 </head>
+
 <body>
+
     <div class="container">
         
         <div class="card4" id="card4">
@@ -171,7 +190,14 @@
                         <button>Lesgo</button>
                     </div>
                     <div class="card-box2" id="card2">
+                        
+                        <!-- <iframe id="video2" src="https://drive.google.com/file/d/13bH4QUXzu01TCA1zRh40PJqpxzj-wvBR/preview" width="640" height="360"></iframe> -->
+                        <!-- <iframe id="video2" width="640" height="360" src="" frameborder="0" allowfullscreen></iframe> -->
+
+                         <!-- <iframe id="video2" width="560" height="315" src="https://www.youtube.com/embed/4WzKNHie8xM?autoplay=1&start=60" frameborder="0" allowfullscreen></iframe> -->
                         <video id="video2" src="falling in love.webm"></video>
+        
+        
                     </div>
 
                     <div class="card-box3" id="card3">
@@ -182,7 +208,7 @@
                     </div>
                 </div>
 
-                <p id="copyright">Created by Alford Stanley Harjadi 2023 #Miraclye Destiny2023</p>
+                <p id="copyright">Created by Alford Stanley Harjadi 2023 #MiracleDestiny2023</p>
             </div>
 
             <div class="card-box" id="cardbox2">
@@ -212,6 +238,7 @@
         </div>
     </div>
 </body>
+
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         const video = document.getElementById("video1");
@@ -229,19 +256,31 @@
         card4.style.display= "none";
         cbox2.style.display = "none";
 
-
-        // Menambahkan event listener ke tombol
-        button.addEventListener("click", function() {
-            // Munculkan video
-            video.style.display = "block";
-            card1.style.display = "none";
-            card2.style.display= "block";
+     
         
+        // video2.src = "https://drive.google.com/file/d/13bH4QUXzu01TCA1zRh40PJqpxzj-wvBR/preview?autoplay=1";
+        // video2.contentWindow.document.addEventListener("ended", function() {
+        //                             // Jalankan script lain setelah video selesai diputar
+        //                             alert("hello world");
+        //                         });
+           // Menambahkan event listener ke tombol
+           button.addEventListener("click", function() {
+                        // Munculkan video
+                        video.style.display = "block";
+                        card1.style.display = "none";
+                        card2.style.display= "block";
+                    
 
-            // Putar video secara otomatis
-            video.play();
-            video2.play();
-        });
+                        // Putar video secara otomatis
+                        video.play();
+                        video2.play();
+
+
+                       
+                    
+                   
+
+                    });
 
         // Event listener untuk mengulang video ketika selesai
         video.addEventListener("ended", function() {
